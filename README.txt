@@ -10,7 +10,6 @@ INSTALL
 WIDGET AREAS
 Footer 1 - This is the first column of the footer section.
 Footer 2 - This is the second column of the footer section.
-Footer 3 - This is the third column of the footer section.
 
 CUSTOM BACKGROUND
 This theme supports custom background, which is a native WordPress function.
@@ -35,3 +34,8 @@ CHANGELOG
 
 = 1.0.4 =
 * Added sticky message widget area
+
+= 2.0 =
+* Update design
+* Remove header widget area
+* Remove sidebars
