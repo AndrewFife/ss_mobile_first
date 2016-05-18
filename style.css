@@ -1,13 +1,13 @@
 /*
-	Theme Name: BG Mobile First
-	Theme URI: http://briangardner.com/themes/mobile-first/
+	Theme Name: SS Mobile First 2016
+	Theme URI: http://github.com/AndrewFife/ss_mobile_first/
 	Description: A mobile responsive and HTML5 theme built for the Genesis Framework.
-	Author: StudioPress
-	Author URI: http://briangardner.com/
+	Author: Adapted by Andrew Fife
+	Author URI: http://ucc.co.za
 
 	Version: 2.0
 
-	Tags: black, red, white, one-column, responsive-layout, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments
+	Tags: black, Orange, white, one-column, responsive-layout, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments
 
 	Template: genesis
 	Template Version: 2.1.3
@@ -1310,7 +1310,7 @@ p.form-submit,
 	}
 
 	.genesis-nav-menu li.highlight a {
-		background-color: #e5554e;
+		background-color: #f60;
 		border-radius: 3px;
 		color: #fff;
 		margin-left: 20px;
