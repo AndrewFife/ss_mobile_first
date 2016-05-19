@@ -3,8 +3,8 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Mobile First Theme' );
-define( 'CHILD_THEME_URL', 'http://briangardner.com/themes/mobile-first/' );
+define( 'CHILD_THEME_NAME', ' SS Mobile First Theme 2016' );
+define( 'CHILD_THEME_URL', 'http://ucc.co.za' );
 define( 'CHILD_THEME_VERSION', '2.0' );
 
 //* Enqueue scripts and styles
@@ -85,7 +85,7 @@ add_filter( 'genesis_seo_title','genesischild_custom_logo', 10, 3 );
 	}
  }
  add_filter( 'genesis_attr_site-description', 'genesischild_add_site_description_class' );
- 
+
  /* Removing custom title/logo metabox from Genesis theme options page.
  * See http://www.billerickson.net/code/remove-metaboxes-from-genesis-theme-settings/
  * Updated to use $_genesis_admin_settings instead of legacy variable in Bill's example.
@@ -101,7 +101,7 @@ function be_remove_metaboxes( $_genesis_admin_settings ) {
 add_action( 'customize_register', 'es_theme_customize_register', 99 ); // Priority had to be last for this to work
 function es_theme_customize_register( $wp_customize ) {
 	$wp_customize->remove_control('blog_title');
-   
+
 }
 
 //* Add support for custom background
@@ -138,6 +138,28 @@ function mobile_first_sticky_message() {
 	) );
 
 }
+
+//Add in new Slider  areas
+function ss2016_extra_widgets() {
+	genesis_register_sidebar( array(
+	'id'            => 'slider',
+	'name'          => __( 'Slider', 'genesischild' ),
+	'description'   => __( 'This is the Slider area', 'genesischild' ),
+	'before_widget' => '<div class="wrap slider">',
+	'after_widget'  => '</div>',
+	) );
+}
+
+	add_action( 'widgets_init', 'ss2016_extra_widgets' );
+
+//Position the slider Area
+function ss2016_slider_widget() {
+		genesis_widget_area ( 'slider', array(
+	'before' => '<aside class="slider-container">',
+	'after'  => '</aside>',));
+}
+
+add_action( 'genesis_after_header','ss2016_slider_widget' );
 
 //* Modify size of the Gravatar in the author box
 add_filter( 'genesis_author_box_gravatar_size', 'mobile_first_author_box_gravatar' );
