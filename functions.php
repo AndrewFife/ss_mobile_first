@@ -19,6 +19,14 @@ function mobile_first_scripts_styles() {
 
 }
 
+//* Remove Genesis Page Templates (http://www.billerickson.net/remove-genesis-page-templates/)
+ function be_remove_genesis_page_templates( $page_templates ) {
+	unset( $page_templates['page_archive.php'] );
+	unset( $page_templates['page_blog.php'] );
+	return $page_templates;
+}
+add_filter( 'theme_page_templates', 'be_remove_genesis_page_templates' );
+
 //* Add HTML5 markup structure
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', ) );
 
